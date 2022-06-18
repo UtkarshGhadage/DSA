@@ -1,1 +1,55 @@
 
+public class LinearSearch1 {
+    public static void main(String[] args) {
+      
+
+        int[] arr = {11,12,13,14,15,16,17,18};
+        int target = 15;
+
+        int ans = linearSearchIndex(arr,target);
+        System.out.println(ans);
+
+        int val = linearSearchValue(arr,target);
+        System.out.println(val);
+
+        
+    }
+    
+    static int linearSearchIndex(int arr[],int target)
+    {
+        if(arr.length==0)
+        {
+            return Integer.MAX_VALUE;
+        }
+
+        for(int index=0;index<arr.length;index++)
+        {
+            if(arr[index]==target)
+            {
+                return index;
+            }
+        }
+
+        return Integer.MAX_VALUE;
+    }
+
+    static int linearSearchValue(int arr[],int target)
+    {
+        if(arr.length==0)
+        {
+            return Integer.MAX_VALUE;
+        }
+
+        for(int x:arr)
+        {   
+            if(x==target)
+            {
+                return x;
+            }
+        }
+
+        return Integer.MAX_VALUE;
+    }
+    
+}
+
